@@ -1,4 +1,4 @@
-package fr.levraigabin.trueplugin.scenarios.damagespawnmob;
+package fr.levraigabin.trueplugin.scenarios.damagespawnentity;
 
 import org.bukkit.Location;
 import org.bukkit.World;

@@ -1,4 +1,4 @@
-package fr.levraigabin.trueplugin.scenarios.damagespawnmob;
+package fr.levraigabin.trueplugin.scenarios.damagespawnentity;
 
 import fr.levraigabin.trueplugin.TruePlugin;
 import org.bukkit.event.HandlerList;

@@ -1,6 +1,6 @@
 package fr.levraigabin.trueplugin;
 
-import fr.levraigabin.trueplugin.scenarios.damagespawnmob.DamageSpawnEntity;
+import fr.levraigabin.trueplugin.scenarios.damagespawnentity.DamageSpawnEntity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
