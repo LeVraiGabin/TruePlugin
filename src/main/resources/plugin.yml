@@ -1,0 +1,12 @@
+name: TruePlugin
+version: '${project.version}'
+main: fr.levraigabin.trueplugin.trueplugin.TruePlugin
+api-version: 1.19
+authors: [ LeVraiGabin ]
+description: Minecraft Plugin for LeVraiGabin videos
+website: https://youtube.com/c/LeVraiGabin
+commands:
+  trueplugin:
+    description: TruePlugin main command
+    aliases:
+      - trp
