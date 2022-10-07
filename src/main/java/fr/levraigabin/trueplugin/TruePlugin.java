@@ -1,22 +1,18 @@
-package fr.levraigabin.trueplugin.trueplugin;
+package fr.levraigabin.trueplugin;
 
-import fr.levraigabin.trueplugin.trueplugin.commands.CommandTruePlugin;
-import org.bukkit.entity.EntityType;
+import fr.levraigabin.trueplugin.commands.CommandTruePlugin;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 public final class TruePlugin extends JavaPlugin {
 
-    public static List<String> enabled;
+    public static Plugin plugin;
 
     @Override
     public void onEnable() {
+        plugin = this;
         System.out.println("TruePlugin is enabled!");
         getCommand("trueplugin").setExecutor(new CommandTruePlugin());
-        getServer().getPluginManager().registerEvents(new TruePluginEvents(), this);
     }
 
     @Override

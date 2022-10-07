@@ -1,9 +1,9 @@
 name: TruePlugin
 version: '${project.version}'
-main: fr.levraigabin.trueplugin.trueplugin.TruePlugin
+main: fr.levraigabin.trueplugin.TruePlugin
 api-version: 1.19
 authors: [ LeVraiGabin ]
-description: Minecraft Plugin for LeVraiGabin videos
+description: Minecraft But and Scenarios for Youtube Videos
 website: https://youtube.com/c/LeVraiGabin
 commands:
   trueplugin:

@@ -11,7 +11,7 @@
 
     <name>TruePlugin</name>
 
-    <description>Minecraft Plugin for LeVraiGabin videos</description>
+    <description>Minecraft But and Scenarios for Youtube Videos</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
