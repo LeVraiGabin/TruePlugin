@@ -3,7 +3,7 @@ version: '${project.version}'
 main: fr.levraigabin.trueplugin.TruePlugin
 api-version: 1.19
 authors: [ LeVraiGabin ]
-description: Minecraft But and Scenarios for Youtube Videos
+description: Scenarios for Youtube Videos
 website: https://youtube.com/c/LeVraiGabin
 commands:
   trueplugin:
