@@ -1,6 +1,7 @@
 package fr.levraigabin.trueplugin;
 
 import fr.levraigabin.trueplugin.scenarios.damagespawnentity.DamageSpawnEntity;
+import fr.levraigabin.trueplugin.scenarios.eatgiveeffect.EatGiveEffect;
 import fr.levraigabin.trueplugin.scenarios.placeblocksdisabled.PlaceBlocksDisabled;
 
 import java.util.ArrayList;
@@ -10,7 +11,8 @@ import java.util.List;
 public class Scenarios {
     public static List<String> scenarios = Arrays.asList(
             "damage-spawn-entity",
-            "place-blocks-disabled"
+            "place-blocks-disabled",
+            "eat-give-effect"
     );
     public static List<String> enabled = new ArrayList<>();
 
@@ -26,6 +28,8 @@ public class Scenarios {
                 DamageSpawnEntity.load();
             } else if (scenario.equalsIgnoreCase("place-blocks-disabled")) {
                 PlaceBlocksDisabled.load();
+            } else if (scenario.equalsIgnoreCase("eat-give-effect")) {
+                EatGiveEffect.load();
             }
         }
     }
@@ -37,6 +41,8 @@ public class Scenarios {
                 DamageSpawnEntity.unload();
             } else if (scenario.equalsIgnoreCase("place-blocks-disabled")) {
                 PlaceBlocksDisabled.unload();
+            } else if (scenario.equalsIgnoreCase("eat-give-effect")) {
+                EatGiveEffect.unload();
             }
         }
     }
@@ -49,7 +55,8 @@ public class Scenarios {
                 "§m          \n" +
                 "§eScenarios:\n" +
                 "§6damage-spawn-entity§r: §bSpawn a random entity when you take a damage.\n" +
-                "§6place-blocks-disabled§r: §bDisable block placement.";
+                "§6place-blocks-disabled§r: §bDisable block placement.\n" +
+                "§6eat-give-effect§r: §bEating gives you a random effect.";
         return text;
     }
 }
