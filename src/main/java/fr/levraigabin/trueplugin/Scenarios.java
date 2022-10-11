@@ -3,6 +3,7 @@ package fr.levraigabin.trueplugin;
 import fr.levraigabin.trueplugin.scenarios.damagespawnentity.DamageSpawnEntity;
 import fr.levraigabin.trueplugin.scenarios.eatgiveeffect.EatGiveEffect;
 import fr.levraigabin.trueplugin.scenarios.placeblocksdisabled.PlaceBlocksDisabled;
+import fr.levraigabin.trueplugin.scenarios.suncausesdamage.SunCausesDamage;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +13,8 @@ public class Scenarios {
     public static List<String> scenarios = Arrays.asList(
             "damage-spawn-entity",
             "place-blocks-disabled",
-            "eat-give-effect"
+            "eat-give-effect",
+            "sun-causes-damage"
     );
     public static List<String> enabled = new ArrayList<>();
 
@@ -30,6 +32,8 @@ public class Scenarios {
                 PlaceBlocksDisabled.load();
             } else if (scenario.equalsIgnoreCase("eat-give-effect")) {
                 EatGiveEffect.load();
+            } else if (scenario.equalsIgnoreCase("sun-causes-damage")) {
+                SunCausesDamage.load();
             }
         }
     }
@@ -43,6 +47,8 @@ public class Scenarios {
                 PlaceBlocksDisabled.unload();
             } else if (scenario.equalsIgnoreCase("eat-give-effect")) {
                 EatGiveEffect.unload();
+            } else if (scenario.equalsIgnoreCase("sun-causes-damage")) {
+                SunCausesDamage.unload();
             }
         }
     }
