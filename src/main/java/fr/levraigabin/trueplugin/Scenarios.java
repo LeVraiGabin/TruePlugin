@@ -1,6 +1,7 @@
 package fr.levraigabin.trueplugin;
 
 import fr.levraigabin.trueplugin.scenarios.damagespawnentity.DamageSpawnEntity;
+import fr.levraigabin.trueplugin.scenarios.darknesscausesdamage.DarknessCausesDamage;
 import fr.levraigabin.trueplugin.scenarios.eatgiveeffect.EatGiveEffect;
 import fr.levraigabin.trueplugin.scenarios.placeblocksdisabled.PlaceBlocksDisabled;
 import fr.levraigabin.trueplugin.scenarios.suncausesdamage.SunCausesDamage;
@@ -14,7 +15,8 @@ public class Scenarios {
             "damage-spawn-entity",
             "place-blocks-disabled",
             "eat-give-effect",
-            "sun-causes-damage"
+            "sun-causes-damage",
+            "darkness-causes-damage"
     );
     public static List<String> enabled = new ArrayList<>();
 
@@ -34,6 +36,8 @@ public class Scenarios {
                 EatGiveEffect.load();
             } else if (scenario.equalsIgnoreCase("sun-causes-damage")) {
                 SunCausesDamage.load();
+            } else if (scenario.equalsIgnoreCase("darkness-causes-damage")) {
+                DarknessCausesDamage.load();
             }
         }
     }
@@ -49,6 +53,8 @@ public class Scenarios {
                 EatGiveEffect.unload();
             } else if (scenario.equalsIgnoreCase("sun-causes-damage")) {
                 SunCausesDamage.unload();
+            } else if (scenario.equalsIgnoreCase("darkness-causes-damage")) {
+                DarknessCausesDamage.unload();
             }
         }
     }
@@ -62,7 +68,9 @@ public class Scenarios {
                 "§eScenarios:\n" +
                 "§6damage-spawn-entity§r: §bSpawn a random entity when you take a damage.\n" +
                 "§6place-blocks-disabled§r: §bDisable block placement.\n" +
-                "§6eat-give-effect§r: §bEating gives you a random effect.";
+                "§6eat-give-effect§r: §bEating gives you a random effect.\n" +
+                "§6sun-causes-damage§r: §bSunlight causes damage.\n" +
+                "§6darkness-causes-damage§r: §bDarkness causes damage.";
         return text;
     }
 }

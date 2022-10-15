@@ -1,16 +1,16 @@
-package fr.levraigabin.trueplugin.scenarios.suncausesdamage;
+package fr.levraigabin.trueplugin.scenarios.darknesscausesdamage;
 
 import fr.levraigabin.trueplugin.TruePlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.scheduler.BukkitTask;
 
-public class SunCausesDamage {
-    public static Listener listener = new SunCausesDamageListener();
+public class DarknessCausesDamage {
+    public static Listener listener = new DarknessCausesDamageListener();
     public static BukkitTask task;
 
     public static void load() {
-        task = new SunCausesDamageRunnable().runTaskTimer(TruePlugin.plugin, 1,40);
+        task = new DarknessCausesDamageRunnable().runTaskTimer(TruePlugin.plugin, 1,40);
     }
     public static void unload() {
         Bukkit.getScheduler().cancelTask(task.getTaskId());
