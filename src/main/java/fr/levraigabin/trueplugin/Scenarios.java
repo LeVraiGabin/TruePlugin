@@ -3,6 +3,7 @@ package fr.levraigabin.trueplugin;
 import fr.levraigabin.trueplugin.scenarios.damagespawnentity.DamageSpawnEntity;
 import fr.levraigabin.trueplugin.scenarios.darknesscausesdamage.DarknessCausesDamage;
 import fr.levraigabin.trueplugin.scenarios.eatgiveeffect.EatGiveEffect;
+import fr.levraigabin.trueplugin.scenarios.killanimalspawnmonster.KillAnimalSpawnMonster;
 import fr.levraigabin.trueplugin.scenarios.placeblocksdisabled.PlaceBlocksDisabled;
 import fr.levraigabin.trueplugin.scenarios.suncausesdamage.SunCausesDamage;
 
@@ -16,7 +17,8 @@ public class Scenarios {
             "place-blocks-disabled",
             "eat-give-effect",
             "sun-causes-damage",
-            "darkness-causes-damage"
+            "darkness-causes-damage",
+            "kill-animal-spawn-monster"
     );
     public static List<String> enabled = new ArrayList<>();
 
@@ -38,6 +40,8 @@ public class Scenarios {
                 SunCausesDamage.load();
             } else if (scenario.equalsIgnoreCase("darkness-causes-damage")) {
                 DarknessCausesDamage.load();
+            } else if (scenario.equalsIgnoreCase("kill-animal-spawn-monster")) {
+                KillAnimalSpawnMonster.load();
             }
         }
     }
@@ -55,6 +59,8 @@ public class Scenarios {
                 SunCausesDamage.unload();
             } else if (scenario.equalsIgnoreCase("darkness-causes-damage")) {
                 DarknessCausesDamage.unload();
+            } else if (scenario.equalsIgnoreCase("kill-animal-spawn-monster")) {
+                KillAnimalSpawnMonster.unload();
             }
         }
     }
@@ -70,7 +76,8 @@ public class Scenarios {
                 "§6place-blocks-disabled§r: §bDisable block placement.\n" +
                 "§6eat-give-effect§r: §bEating gives you a random effect.\n" +
                 "§6sun-causes-damage§r: §bSunlight causes damage.\n" +
-                "§6darkness-causes-damage§r: §bDarkness causes damage.";
+                "§6darkness-causes-damage§r: §bDarkness causes damage.\n" +
+                "§6kill-animal-spawn-monster§r: §bSpawn a random monster when you kill an animal.";
         return text;
     }
 }
