@@ -1,14 +1,14 @@
-package fr.levraigabin.trueplugin.scenarios.suncausesdamage;
+package fr.levraigabin.trueplugin.scenarios.timeincreasespeed;
 
 import fr.levraigabin.trueplugin.TruePlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitTask;
 
-public class SunCausesDamage {
+public class TimeIncreaseSpeed {
     public static BukkitTask task;
 
     public static void load() {
-        task = new SunCausesDamageRunnable().runTaskTimer(TruePlugin.plugin, 1,40);
+        task = new TimeIncreaseSpeedRunnable().runTaskTimer(TruePlugin.plugin, 1,20 * 60);
     }
     public static void unload() {
         Bukkit.getScheduler().cancelTask(task.getTaskId());

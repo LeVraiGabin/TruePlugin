@@ -6,6 +6,7 @@ import fr.levraigabin.trueplugin.scenarios.eatgiveeffect.EatGiveEffect;
 import fr.levraigabin.trueplugin.scenarios.killanimalspawnmonster.KillAnimalSpawnMonster;
 import fr.levraigabin.trueplugin.scenarios.placeblocksdisabled.PlaceBlocksDisabled;
 import fr.levraigabin.trueplugin.scenarios.suncausesdamage.SunCausesDamage;
+import fr.levraigabin.trueplugin.scenarios.timeincreasespeed.TimeIncreaseSpeed;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,8 @@ public class Scenarios {
             "eat-give-effect",
             "sun-causes-damage",
             "darkness-causes-damage",
-            "kill-animal-spawn-monster"
+            "kill-animal-spawn-monster",
+            "time-increase-speed"
     );
     public static List<String> enabled = new ArrayList<>();
 
@@ -42,6 +44,8 @@ public class Scenarios {
                 DarknessCausesDamage.load();
             } else if (scenario.equalsIgnoreCase("kill-animal-spawn-monster")) {
                 KillAnimalSpawnMonster.load();
+            } else if (scenario.equalsIgnoreCase("time-increase-speed")) {
+                TimeIncreaseSpeed.load();
             }
         }
     }
@@ -61,6 +65,8 @@ public class Scenarios {
                 DarknessCausesDamage.unload();
             } else if (scenario.equalsIgnoreCase("kill-animal-spawn-monster")) {
                 KillAnimalSpawnMonster.unload();
+            } else if (scenario.equalsIgnoreCase("time-increase-speed")) {
+                TimeIncreaseSpeed.unload();
             }
         }
     }
@@ -77,7 +83,8 @@ public class Scenarios {
                 "§6eat-give-effect§r: §bEating gives you a random effect.\n" +
                 "§6sun-causes-damage§r: §bSunlight causes damage.\n" +
                 "§6darkness-causes-damage§r: §bDarkness causes damage.\n" +
-                "§6kill-animal-spawn-monster§r: §bSpawn a random monster when you kill an animal.";
+                "§6kill-animal-spawn-monster§r: §bSpawn a random monster when you kill an animal.\n" +
+                "§6time-increases-speed§r: §bIncrease your speed every minute.";
         return text;
     }
 }
